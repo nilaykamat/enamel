@@ -6,8 +6,8 @@ const app = express();
 
 const api = require('./server/routes/api');
 
-api.use(bodyParser.json());
-api.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(express.static(path.join(__dirname,'dist')));
 
