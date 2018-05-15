@@ -1,5 +1,8 @@
 <div id="top-bar">
 	<span id="menu-btn" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+	<span>
+		<img id="top-logo" src="../../assets/logo/enamel-inv.png"/>
+	</span>
 </div>
 
 <div id="side-bar" class="side-nav">
@@ -10,7 +13,23 @@
   <a href="#">Treatments</a>
   <a href="#">Inventory</a>
   <hr/>
-  <a href="#">Settings</a>
   <a href="#">About</a>
 </div>
 
+<div id="profile-box" (click)="toggleProfile()">
+  <div class="details d-flex flex-row  align-items-center justify-content-end">
+  	<div class="details d-flex flex-column align-items-end justify-content-center">
+	  	<span>Vivek</span>
+	  	<span>Naiyan</span>
+	</div>
+  	<span>&nbsp;</span>
+  	<span>&nbsp;</span>
+  	<img class="rounded" src="../../assets/misc/thumb_vivek.jpg">
+  	<span>&nbsp;</span>
+  	<span>&nbsp;</span>
+  </div>
+  <div class="details d-flex flex-column align-items-end justify-content-center">
+	  <a href="#">Settings</a>
+	  <a href="#">Log out</a>
+  </div>
+</div>

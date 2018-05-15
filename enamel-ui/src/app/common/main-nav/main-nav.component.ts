@@ -9,6 +9,7 @@ export class MainNavComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 
@@ -18,7 +19,14 @@ export class MainNavComponent implements OnInit {
 
   closeNav() {
     document.getElementById("side-bar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
+  }
+
+  toggleProfile(){
+  	let className = document.getElementById("profile-box").getAttribute("class");
+  	if(className == 'active')
+  		document.getElementById("profile-box").setAttribute("class","");
+  	else
+  		document.getElementById("profile-box").setAttribute("class","active");
   }
 
 }
