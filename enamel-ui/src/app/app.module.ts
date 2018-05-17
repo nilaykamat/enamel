@@ -8,6 +8,10 @@ import { MainNavComponent } from './common/main-nav/main-nav.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
+import { PatientListComponent } from './patient/patient-list/patient-list.component';
+import { PatientDetailsComponent } from './patient/patient-details/patient-details.component';
+import { PatientAddComponent } from './patient/patient-add/patient-add.component';
+import { PatientEditComponent } from './patient/patient-edit/patient-edit.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import { RegisterComponent } from './user/register/register.component';
     MainNavComponent,
     DashboardComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PatientListComponent,
+    PatientDetailsComponent,
+    PatientAddComponent,
+    PatientEditComponent
   ],
   imports: [
     BrowserModule,
