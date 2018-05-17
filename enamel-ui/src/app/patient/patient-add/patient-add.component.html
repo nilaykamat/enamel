@@ -139,6 +139,25 @@
                   </div>
                 </div>
               </div>
+
+
+	            <hr class="mb-4">
+	            <h4 class="d-flex justify-content-between align-items-center mt-3">
+	              <span class="">Notes</span>
+	            </h4>
+
+				<div class="form-group mt-3">
+			      <label for="reg-notes-complaint">Chief Complaint</label>
+			      <textarea class="form-control" id="reg-notes-complaint" rows="3"></textarea>
+			    </div>
+				<div class="form-group mt-3">
+			      <label for="reg-notes-hist">History of Present Illness</label>
+			      <textarea class="form-control" id="reg-notes-hist" rows="3"></textarea>
+			    </div>
+				<div class="form-group mt-3">
+			      <label for="reg-notes-dent-hist">Past Dental History</label>
+			      <textarea class="form-control" id="reg-notes-dent-hist" rows="3"></textarea>
+			    </div>
           </div>
 
 
@@ -153,8 +172,18 @@
             	</div>
             </div>
 
-
-
+            <hr class="mb-4"/>
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="">Dentist</span>
+            </h4>
+              <select class="custom-select d-block w-100" id="reg-dentist" required="">
+                <option value="">Choose...</option>
+                <option>Dr. Vivek Naiyan</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid Dentist.
+              </div>
+             <hr class="mb-4"/>
 
             <h4 class="d-flex justify-content-between align-items-center mt-3">
               <span class="">Medical History</span>
@@ -298,6 +327,7 @@
 			    Trimester - III
 			  </label>
 			</div>
+
             <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
           </div>

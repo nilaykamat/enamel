@@ -1,3 +1,362 @@
-<p>
-  patient-edit works!
-</p>
+<div class="container">
+      <div class="py-5 text-center">
+        <div class="mt-5"></div>
+        <h2>Update Patient Details</h2>
+      </div>
+
+
+      <form class="needs-validation" novalidate="">
+
+        <div class="row">
+
+          <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Profile</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="reg-firstName">First name</label>
+                  <input type="text" class="form-control" id="reg-firstName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="reg-lastName">Last name</label>
+                  <input type="text" class="form-control" id="reg-lastName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="reg-email">Email</label>
+                <input type="email" class="form-control" id="reg-email" placeholder="you@example.com" required="">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="reg-mob">Mobile no.</label>
+                <input type="number" class="form-control" id="reg-mob" placeholder="you@example.com" required="">
+                <div class="invalid-feedback">
+                  Please enter a valid mobile number.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="reg-address">Address</label>
+                <input type="text" class="form-control" id="reg-address" placeholder="1234 Main St" required="">
+                <div class="invalid-feedback">
+                  Please enter your address.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="reg-address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="reg-address2" placeholder="Apartment or suite">
+              </div>
+
+              
+              <div class="row mb-3">
+            		<div class="col-6">
+            			<h6>Gender</h6>
+						<div class="form-check mt-2">
+						  <input class="form-check-input" type="radio" name="reg-sex" id="reg-sex-m" value="male" checked>
+						  <label class="form-check-label" for="reg-sex-m">
+						    Male
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="reg-sex" id="reg-sex-f" value="female">
+						  <label class="form-check-label" for="reg-sex-f">
+						    Female
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="reg-sex" id="reg-sex-o" value="other">
+						  <label class="form-check-label" for="reg-sex-o">
+						    Other
+						  </label>
+						</div>
+					</div>
+            		<div class="col-6">
+	                  <label for="reg-age">Age</label>
+	                  <input type="text" class="form-control" id="reg-age" placeholder="" value="" required="">
+	                  <div class="invalid-feedback">
+	                    Valid age is required.
+	                  </div>
+					</div>
+			  </div>
+
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="reg-country">Country</label>
+                  <input type="text" class="form-control" id="reg-country" placeholder="Country">
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="reg-state">State</label>
+                  <input type="text" class="form-control" id="reg-state" placeholder="State">
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="reg-zip">Zip</label>
+                  <input type="text" class="form-control" id="reg-zip" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Zip code required.
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+
+              <h4 class="mb-3">Identification</h4>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="reg-idtype">ID Type</label>
+                  <select class="custom-select d-block w-100" id="reg-idtype" required="">
+                    <option value="">Choose...</option>
+                    <option>Passport</option>
+                    <option>Aadhaar</option>
+                    <option>Driving Licence</option>
+                    <option>Ration Card</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid ID Type.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="reg-id">ID Number</label>
+                  <input type="text" class="form-control" id="reg-id" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    ID number is required
+                  </div>
+                </div>
+              </div>
+
+
+	            <hr class="mb-4">
+	            <h4 class="d-flex justify-content-between align-items-center mt-3">
+	              <span class="">Notes</span>
+	            </h4>
+
+				<div class="form-group mt-3">
+			      <label for="reg-notes-complaint">Chief Complaint</label>
+			      <textarea class="form-control" id="reg-notes-complaint" rows="3"></textarea>
+			    </div>
+				<div class="form-group mt-3">
+			      <label for="reg-notes-hist">History of Present Illness</label>
+			      <textarea class="form-control" id="reg-notes-hist" rows="3"></textarea>
+			    </div>
+				<div class="form-group mt-3">
+			      <label for="reg-notes-dent-hist">Past Dental History</label>
+			      <textarea class="form-control" id="reg-notes-dent-hist" rows="3"></textarea>
+			    </div>
+          </div>
+
+
+          <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="">Photo</span>
+            </h4>
+
+            <div class="card p-2">
+            	<div class="large-thumb d-flex flex-row align-items-center justify-content-center">
+              		<img src="../../assets/misc/headshot/p1.jpg" alt="..." class="img-thumbnail">
+            	</div>
+            </div>
+
+            <hr class="mb-4"/>
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="">Dentist</span>
+            </h4>
+              <select class="custom-select d-block w-100" id="reg-dentist" required="">
+                <option value="">Choose...</option>
+                <option>Dr. Vivek Naiyan</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid Dentist.
+              </div>
+             <hr class="mb-4"/>
+
+            <h4 class="d-flex justify-content-between align-items-center mt-3">
+              <span class="">Medical History</span>
+            </h4>
+
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-headaches">
+			  <label class="form-check-label" for="reg-hist-headaches">
+			    Chronic Headaches
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-heart">
+			  <label class="form-check-label" for="reg-hist-heart">
+			    Heart Problems
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-bp">
+			  <label class="form-check-label" for="reg-hist-bp">
+			    High/Low Blood Pressure
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-weight">
+			  <label class="form-check-label" for="reg-hist-weight">
+			    Large Weight Gain/Loss
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-blood">
+			  <label class="form-check-label" for="reg-hist-blood">
+			    Blood Disease
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-hiv">
+			  <label class="form-check-label" for="reg-hist-hiv">
+			    HIV/AIDS
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-hepatitis">
+			  <label class="form-check-label" for="reg-hist-hepatitis">
+			    Hepatitis
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-arthritis">
+			  <label class="form-check-label" for="reg-hist-arthritis">
+			    Arthritis
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-epilepsy">
+			  <label class="form-check-label" for="reg-hist-epilepsy">
+			    Epilepsy
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-chemo">
+			  <label class="form-check-label" for="reg-hist-chemo">
+			    Radiation Treatment
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-fainting">
+			  <label class="form-check-label" for="reg-hist-fainting">
+			    Fainting Spells
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-liver">
+			  <label class="form-check-label" for="reg-hist-liver">
+			    Liver Diseases
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-kidney">
+			  <label class="form-check-label" for="reg-hist-kidney">
+			    Kidney Problems
+			  </label>
+			</div>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-tonsil">
+			  <label class="form-check-label" for="reg-hist-tonsil">
+			    Tonsilitis
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-hist-bleed">
+			  <label class="form-check-label" for="reg-hist-bleed">
+			    Abnormal bleeding
+			  </label>
+			</div>
+            <hr class="mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mt-3">
+              <span class="">Allergies</span>
+            </h4>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-aller-latex">
+			  <label class="form-check-label" for="reg-aller-latex">
+			    Latex
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-aller-anb">
+			  <label class="form-check-label" for="reg-aller-anb">
+			    Antibiotics
+			  </label>
+			</div>
+			<div class="form-group mt-3">
+		      <label for="reg-aller-other">Other Allergies</label>
+		      <textarea class="form-control" id="reg-aller-other" rows="3"></textarea>
+		    </div>
+            <hr class="mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mt-3">
+              <span class="">Pregnancy</span>
+            </h4>
+            <div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="reg-preg">
+			  <label class="form-check-label" for="reg-preg">
+			    Patient Pregnant?
+			  </label>
+			</div>
+			<div class="form-check mt-2">
+			  <input class="form-check-input" type="radio" name="reg-preg-trim" id="reg-preg-trim1" value="t1" checked>
+			  <label class="form-check-label" for="reg-preg-trim1">
+			    Trimester - I
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="radio" name="reg-preg-trim" id="reg-preg-trim2" value="t2">
+			  <label class="form-check-label" for="reg-preg-trim2">
+			    Trimester - II
+			  </label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="radio" name="reg-preg-trim" id="reg-preg-trim3" value="t3">
+			  <label class="form-check-label" for="reg-preg-trim3">
+			    Trimester - III
+			  </label>
+			</div>
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
+          </div>
+
+          
+        </div>
+      </form>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2018 Amey Naiyan</p>
+      </footer>
+    </div>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
