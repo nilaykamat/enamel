@@ -15,10 +15,12 @@ export class MainNavComponent implements OnInit {
 
   openNav() {
     document.getElementById("side-bar").style.width = "250px";
+    document.getElementById("side-bar").style.opacity = "1";
   }
 
   closeNav() {
     document.getElementById("side-bar").style.width = "0";
+    document.getElementById("side-bar").style.opacity = "0";
   }
 
   toggleProfile(){

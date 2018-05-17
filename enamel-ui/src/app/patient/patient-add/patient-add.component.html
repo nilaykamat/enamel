@@ -39,7 +39,7 @@
 
               <div class="mb-3">
                 <label for="reg-mob">Mobile no.</label>
-                <input type="number" class="form-control" id="reg-mob" placeholder="you@example.com" required="">
+                <input type="number" class="form-control" id="reg-mob" placeholder="+91 9898989898" required="">
                 <div class="invalid-feedback">
                   Please enter a valid mobile number.
                 </div>
@@ -56,6 +56,31 @@
               <div class="mb-3">
                 <label for="reg-address2">Address 2 <span class="text-muted">(Optional)</span></label>
                 <input type="text" class="form-control" id="reg-address2" placeholder="Apartment or suite">
+              </div>
+              
+
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="reg-country">Country</label>
+                  <input type="text" class="form-control" id="reg-country" placeholder="Country">
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="reg-state">State</label>
+                  <input type="text" class="form-control" id="reg-state" placeholder="State">
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="reg-zip">Zip</label>
+                  <input type="text" class="form-control" id="reg-zip" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Zip code required.
+                  </div>
+                </div>
               </div>
 
               
@@ -89,30 +114,23 @@
 	                  </div>
 					</div>
 			  </div>
-
               <div class="row">
-                <div class="col-md-5 mb-3">
-                  <label for="reg-country">Country</label>
-                  <input type="text" class="form-control" id="reg-country" placeholder="Country">
+                <div class="col-md-6 mb-3">
+                  <label for="reg-height">Height(cms)</label>
+                  <input type="text" class="form-control" id="reg-height" placeholder="" value="" required="">
                   <div class="invalid-feedback">
-                    Please select a valid country.
+                    Valid height is required.
                   </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                  <label for="reg-state">State</label>
-                  <input type="text" class="form-control" id="reg-state" placeholder="State">
+                <div class="col-md-6 mb-3">
+                  <label for="reg-weight">Weight(kgs)</label>
+                  <input type="text" class="form-control" id="reg-weight" placeholder="" value="" required="">
                   <div class="invalid-feedback">
-                    Please provide a valid state.
-                  </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <label for="reg-zip">Zip</label>
-                  <input type="text" class="form-control" id="reg-zip" placeholder="" required="">
-                  <div class="invalid-feedback">
-                    Zip code required.
+                    Valid weight is required.
                   </div>
                 </div>
               </div>
+
               <hr class="mb-4">
 
               <h4 class="mb-3">Identification</h4>
