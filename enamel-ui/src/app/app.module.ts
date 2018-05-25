@@ -1,36 +1,81 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 import { AppComponent } from './app.component';
-import { MainNavComponent } from './common/main-nav/main-nav.component';
-import { DashboardComponent } from './user/dashboard/dashboard.component';
-import { LoginComponent } from './user/login/login.component';
-import { RegisterComponent } from './user/register/register.component';
-import { PatientListComponent } from './patient/patient-list/patient-list.component';
-import { PatientDetailsComponent } from './patient/patient-details/patient-details.component';
-import { PatientAddComponent } from './patient/patient-add/patient-add.component';
-import { PatientEditComponent } from './patient/patient-edit/patient-edit.component';
 
+// Import containers
+import { DefaultLayoutComponent } from './containers';
+
+import { P404Component } from './views/error/404.component';
+import { P500Component } from './views/error/500.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
+import { PatientsComponent } from './views/patients/patients.component';
+import { AppointmentsComponent } from './views/appointments/appointments.component';
+import { StaffComponent } from './views/staff/staff.component';
+import { TreatmentsComponent } from './views/treatments/treatments.component';
+import { InventoryComponent } from './views/inventory/inventory.component';
+
+const APP_CONTAINERS = [
+  DefaultLayoutComponent
+];
+
+import {
+  AppAsideModule,
+  AppBreadcrumbModule,
+  AppHeaderModule,
+  AppFooterModule,
+  AppSidebarModule,
+} from '@coreui/angular'
+
+// Import routing module
+import { AppRoutingModule } from './app.routing';
+
+// Import 3rd party components
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainNavComponent,
-    DashboardComponent,
-    LoginComponent,
-    RegisterComponent,
-    PatientListComponent,
-    PatientDetailsComponent,
-    PatientAddComponent,
-    PatientEditComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppAsideModule,
+    AppBreadcrumbModule.forRoot(),
+    AppFooterModule,
+    AppHeaderModule,
+    AppSidebarModule,
+    PerfectScrollbarModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ChartsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    ...APP_CONTAINERS,
+    P404Component,
+    P500Component,
+    LoginComponent,
+	RegisterComponent,
+	PatientsComponent,
+	AppointmentsComponent,
+	StaffComponent,
+	TreatmentsComponent,
+	InventoryComponent
+  ],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

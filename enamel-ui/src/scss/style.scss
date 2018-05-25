@@ -1,0 +1,13 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "node_modules/@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+body {
+	font-family: 'Open Sans', sans-serif;
+}
